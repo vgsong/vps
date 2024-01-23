@@ -59,13 +59,10 @@ def post():
         flash('Post posted')
         return redirect(url_for('index'))
     
-
 @app.route('/post/<id>')
 def post_detail(id):
     post = db.session.get(Post,id)
     return render_template('postdetail.html', post=post)
-
-
 
 @app.route('/postbook')
 @login_required
@@ -73,7 +70,31 @@ def postbook():
     form = BookForm()
     return render_template('postbook.html', form=form)
 
-
 @app.route('/projsearch')
 def projsearch():
     return render_template('projsearch.html')
+
+
+@app.route('/post/edit/<id>', methods=['GET','POST'])
+@login_required
+def postedit(id):
+
+    query_output = db.session.query(Post).filter(Post.id==id).first()
+    form = PostForm(obj=query_output)
+    to_update = PostForm()
+    
+    if to_update.validate_on_submit():
+        query_toupdate = db.session.scalar(sa.select(Post).where(Post.id==id))
+
+        query_toupdate.title = to_update.title.data
+        query_toupdate.body = to_update.body.data
+        
+        db.session.add(query_toupdate)
+        db.session.commit()
+
+        return redirect(url_for('index'))
+
+    
+
+
+    return render_template('postedit.html', form=form)
