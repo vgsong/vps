@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <p>Excel Tutorial {{current_user.username}}</p>
+
+    
+{% for p in posts %}
+
+    <b><p>{{p.timestamp.strftime('%Y-%m-%d')}}</b> - {{p.title}} -
+    <a href="{{url_for('post_detail', id=p.id)}}">Read More</a></p>
+
+{% endfor %}
+
+{% endblock %}

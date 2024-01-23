@@ -1,0 +1,47 @@
+<html>
+    <head>
+        {{ckeditor.load()}}
+    </head>
+    <body>
+
+        <div>
+        <div>
+            <nav>
+                    <ul>
+                        {% if current_user.is_anonymous %}
+                            <a href="{{url_for('index')}}">Home</a>
+                            <a href="{{url_for('aboutme')}}">About</a>
+                            <a href="{{url_for('login')}}">Login</a>
+
+                        {% else %}
+                            <a href="{{url_for('index')}}">Home</a>
+                            <a href="{{url_for('aboutme')}}">About</a>
+                            <a href="{{url_for('projsearch')}}">Project Search</a>
+                            <a href="{{url_for('post')}}">Post</a>
+
+                            <a href="{{url_for('postbook')}}">Post Book</a>
+                            <a href="{{url_for('logout')}}">Logout</a>
+
+                        {% endif %}
+                    </ul>
+            </nav>
+        </div>
+        <hr>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <div>
+        {% block content %}
+        {% endblock %}
+        </div>
+        </div> 
+
+    </body>
+</html>

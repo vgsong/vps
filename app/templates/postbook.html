@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{{ form.hidden_tag() }}
+
+
+<h3> Enter book you finished reading:</h3>
+<a href="{{url_for('index')}}"><button>Back</button></a>
+
+{% endblock %}
