@@ -1,0 +1,228 @@
+﻿EMPID,NAME,HIREDATE,CITY,SALARY,CATEGORY
+2011,"Smith, John",7/31/2020,Zandia,"62,400 ",Staff
+2012,"Johnson, Robert",9/1/2017,Markovia,"31,200 ",Staff
+2039,"Williams, Michael",11/9/2017,Empire City,"27,040 ",Staff
+2048,"Brown, William",5/20/2017,Markovia,"62,400 ",Staff
+2049,"Jones, David",6/5/2018,Modora,"104,000 ",Manager
+2053,"Garcia, Richard",3/29/2020,Amberwood Landing,"39,520 ",Staff
+2059,"Miller, Joseph",9/17/2020,Ugley,"18,720 ",Staff
+2063,"Davis, Charles",3/19/2018,Looneyville,"33,280 ",Staff
+2077,"Rodriguez, Thomas",10/10/2017,Bludhaven,"291,200 ",Director
+2094,"Martinez, Christopher",7/15/2018,Dollarbeg,"41,600 ",Staff
+2121,"Hernandez, Daniel",1/3/2018,Modora,"104,000 ",Manager
+2130,"Lopez, Matthew",12/25/2017,Dollarbeg,"45,760 ",Staff
+2132,"Gonzalez, Anthony",2/27/2017,Gogogogo,"62,400 ",Staff
+2133,"Wilson, Donald",7/10/2017,Dinkytown,"54,080 ",Staff
+2145,"Anderson, Paul",9/5/2018,Hub City,"432,640 ",Executive
+2147,"Thomas, Mark",4/4/2019,Empire City,"31,200 ",Staff
+2148,"Taylor, George",12/23/2017,Fawcett City,"37,440 ",Staff
+2149,"Moore, Kenneth",2/23/2018,Bludhaven,"62,400 ",Staff
+2157,"Jackson, Steven",2/7/2019,Modora,"89,440 ",Staff
+2159,"Martin, Edward",11/14/2017,Zambesi,"10,400 ",Staff
+2170,"Lee, Brian",11/21/2017,Fart,"484,640 ",Executive
+2182,"Perez, Ronald",8/29/2019,Ivy Town,"60,320 ",Staff
+2207,"Thompson, Kevin",1/12/2017,Looneyville,"60,320 ",Staff
+2217,"White, Jason",5/20/2020,Hub City,"33,280 ",Staff
+2250,"Harris, Jeffery",11/1/2017,Keystone City,"43,680 ",Staff
+2272,"Clark, Ryan",8/15/2017,Batman,"62,400 ",Staff
+2278,"Lewis, Gary",10/8/2020,Fart,"180,960 ",Manager
+2289,"Robinson, Jacob",12/27/2018,Hub City,"104,000 ",Manager
+2291,"Walker, Nicholas",11/14/2020,Empire City,"31,200 ",Staff
+2292,"Hall, Eric",4/4/2020,Fawcett City,"52,000 ",Staff
+2299,"Allen, Jonathan",8/14/2018,Zandia,"52,000 ",Staff
+2313,"Young, Stephen",7/21/2017,Dinkytown,"79,040 ",Staff
+2317,"Hernandez, Larry",10/20/2020,Metropolis,"33,280 ",Staff
+2326,"King, Justin",8/5/2020,Ivy Town,"29,120 ",Staff
+2337,"Wright, Scott",5/10/2019,Modora,"24,960 ",Staff
+2341,"Lopez, Brandon",3/18/2019,Amberwood Landing,"49,920 ",Staff
+2347,"Hill, Frank",2/7/2018,Ugley,"22,880 ",Staff
+2350,"Scott, Benjamin",8/9/2019,Fart,"16,640 ",Staff
+2355,"Green, Gregory",2/23/2017,Star City,"41,600 ",Staff
+2382,"Adams, Raymond",2/12/2017,Dollarbeg,"114,400 ",Manager
+2384,"Baker, Joshua",8/23/2018,Gogogogo,"14,560 ",Staff
+2385,"Gonzalez, Samuel",11/10/2020,Dinkytown,"29,120 ",Staff
+2387,"Nelson, Patrick",1/20/2017,Looneyville,"56,160 ",Staff
+2388,"Carter, Jack",12/26/2019,Gotham,"64,480 ",Staff
+2392,"Mitchell, Dennis",7/22/2017,Central City,"31,200 ",Staff
+2399,"Perez, Jerry",11/23/2019,Empire City,"99,840 ",Staff
+2405,"Roberts, Walter",5/7/2020,Qurac,"31,200 ",Staff
+2411,"Turner, Alexander",7/25/2018,Zambesi,"318,240 ",Executive
+2414,"Phillips, Henry",7/29/2019,Astra Point,"29,120 ",Staff
+2416,"Campbell, Carl",2/23/2020,Batman,"12,480 ",Staff
+2420,"Parker, Arthur",2/24/2017,Gogogogo,"52,000 ",Staff
+2425,"Evans, Kyle",8/12/2018,Metropolis,"87,360 ",Staff
+2432,"Edwards, Harold",12/7/2018,Midway City,"114,400 ",Manager
+2437,"Collins, Gerald",3/20/2017,Bludhaven,"24,960 ",Staff
+2445,"Stewart, Roger",9/2/2018,Modora,"18,720 ",Staff
+2448,"Sanchez, Keith",6/2/2017,Alacrity Town,"114,400 ",Manager
+2459,"Morris, Jeremy",11/26/2020,Looneyville,"62,400 ",Staff
+2467,"Rogers, Terry",5/27/2019,Opal City,"156,000 ",Manager
+2469,"Reed, Lawrence",6/23/2020,Hub City,"20,800 ",Staff
+2471,"Cook, Sean",2/3/2017,Empire City,"29,120 ",Staff
+2472,"Morgan, Christian",1/21/2018,Fawcett City,"79,040 ",Staff
+2481,"Bell, Ethan",3/21/2019,Modora,"172,640 ",Manager
+2482,"Murphy, Austin",4/4/2020,Vlatavastok,"187,200 ",Manager
+2486,"Bailey, Joe",8/4/2020,Astra Point,"20,800 ",Staff
+2494,"Rivera, Albert",11/29/2017,Fart,"135,200 ",Manager
+2495,"Cooper, Jesse",11/3/2020,Looneyville,"101,920 ",Manager
+2496,"Richardson, Billy",2/13/2018,Gotham,"45,760 ",Staff
+2498,"Cox, Bryan",1/16/2017,Smallville,"243,360 ",Director
+2500,"Howard, Bruce",3/29/2019,Central City,"293,280 ",Director
+2501,"Ward, Willie",5/30/2018,Coast City,"297,440 ",Director
+2502,"Torres, Gabriel",7/1/2020,Keystone City,"280,800 ",Director
+2504,"Peterson, Alan",12/31/2018,Midway City,"293,280 ",Director
+2506,"Gray, Dylan",5/25/2018,Ivy Town,"12,480 ",Staff
+2507,"Ramirez, Stanley",8/31/2018,Empire City,"145,600 ",Manager
+2510,"James, Earl",11/10/2020,Corto Maltese,"29,120 ",Staff
+2515,"Watson, Jimmy",5/3/2017,Zandia,"58,240 ",Staff
+2517,"Brooks, Bryan",3/30/2019,Modora,"33,280 ",Staff
+2519,"Kelly, Tony",10/6/2018,Zambesi,"47,840 ",Staff
+2520,"Sanders, Luis",7/13/2017,Alacrity Town,"158,080 ",Manager
+2523,"Price, Charlie",10/4/2019,Advent Ridge,"52,000 ",Staff
+2524,"Bennett, Tyler",9/14/2020,Batman,"58,240 ",Staff
+2525,"Wood, Adam",8/19/2020,Bigfoot,"43,680 ",Staff
+2534,"Barnes, Randy",7/1/2019,Smallville,"58,240 ",Staff
+2536,"Ross, Howard",3/14/2018,Central City,"43,680 ",Staff
+2540,"Henderson, Eugene",5/29/2019,Midway City,"293,280 ",Director
+2545,"Coleman, Carlos",5/20/2017,Bludhaven,"27,040 ",Staff
+2548,"Jenkins, Russell",12/19/2020,Bialya,"20,800 ",Staff
+2552,"Perry, Bobby",10/31/2017,Markovia,"14,560 ",Staff
+2559,"Powell, Jordan",12/18/2020,Advent Ridge,"20,800 ",Staff
+2560,"Long, Victor",11/21/2020,Batman,"35,360 ",Staff
+2568,"Patterson, Louis",9/28/2018,Gotham,"22,880 ",Staff
+2576,"Hughes, Phillip",5/7/2017,Midway City,"60,320 ",Staff
+2577,"Flores, Todd",7/22/2020,Hub City,"145,600 ",Manager
+2578,"Washington, Jesse",2/27/2017,Ivy Town,"293,280 ",Director
+2580,"Butler, Craig",8/6/2018,Fawcett City,"151,840 ",Manager
+2582,"Simmons, Derek",7/18/2018,Corto Maltese,"83,200 ",Staff
+2585,"Foster, Ralph",9/15/2020,Qurac,"58,240 ",Staff
+2592,"Gonzales, Adrian",7/29/2018,Alacrity Town,"12,480 ",Staff
+2599,"Bryant, Brad",1/1/2019,Ugley,"14,560 ",Staff
+2604,"Alexander, Ron",6/4/2019,Gotham,"62,400 ",Staff
+2608,"Russell, Jamie",5/30/2017,Central City,"60,320 ",Staff
+2610,"Griffin, Barry",4/1/2018,Keystone City,"37,440 ",Staff
+2613,"Diaz, Alexander",12/10/2019,Hub City,"39,520 ",Staff
+2616,"Hayes, Francisco",4/12/2018,Fawcett City,"56,160 ",Staff
+2620,"Myers, Darren",3/13/2020,Bialya,"35,360 ",Staff
+2622,"Ford, Logan",1/16/2019,Kahndaq,"33,280 ",Staff
+2624,"Hamilton, Heath",2/27/2018,Markovia,"176,800 ",Manager
+2627,"Graham, Glen",5/5/2018,Zambesi,"31,200 ",Staff
+2629,"Sullivan, Isaac",10/19/2020,Amberwood Landing,"58,240 ",Staff
+2630,"Wallace, Julian",12/28/2020,Astra Point,"33,280 ",Staff
+2633,"Woods, Lucas",10/1/2019,Bigfoot,"62,400 ",Staff
+2636,"Cole, Cody",10/11/2017,Gogogogo,"24,960 ",Staff
+2639,"Bennett, Casey",2/24/2018,Looneyville,"293,280 ",Director
+2640,"Henderson, Perry",5/13/2017,Gotham,"120,640 ",Manager
+2642,"Porter, Neil",9/26/2018,Smallville,"293,280 ",Director
+2643,"Jenkins, Orion",8/23/2018,Star City,"293,280 ",Director
+2650,"Gutierrez, Andre",7/19/2018,Ivy Town,"20,800 ",Staff
+2653,"Perry, Quincy",2/12/2019,Bludhaven,"293,280 ",Director
+2654,"Burgess, Riley",10/4/2017,Corto Maltese,"293,280 ",Director
+2656,"Castro, Sylvester",4/22/2017,Bialya,"18,720 ",Staff
+2663,"Sutton, Tyson",4/7/2019,Zambesi,"14,560 ",Staff
+2664,"Gregory, Ulysses",1/27/2017,Alacrity Town,"18,720 ",Staff
+2666,"Mckinney, Vaughn",12/25/2018,Astra Point,"45,760 ",Staff
+2670,"Lucas, Wesley",3/9/2020,Dollarbeg,"47,840 ",Staff
+2674,"Miles, Xander",11/12/2018,Fart,"79,040 ",Staff
+2676,"Craig, Yale",10/19/2019,Gotham,"193,440 ",Manager
+2677,"Rodriguez, Zachary",10/10/2017,Metropolis,"12,480 ",Staff
+2681,"Chambers, Aaron",8/23/2020,Coast City,"124,800 ",Manager
+2687,"Holt, Brett",2/1/2018,Empire City,"79,040 ",Staff
+2693,"Lambert, Clifford",2/23/2017,Qurac,"27,040 ",Staff
+2696,"Fletcher, Donovan",5/6/2018,Markovia,"293,280 ",Director
+2697,"Watts, Ernest",10/2/2020,Modora,"293,280 ",Director
+2700,"Bates, Ferdinand",2/12/2017,Alacrity Town,"120,640 ",Manager
+2709,"Gnash, Gustavo",3/20/2019,Dinkytown,"43,680 ",Staff
+2710,"Pena, Horatio",3/2/2019,Fart,"29,120 ",Staff
+2715,"Gamble, Ivan",5/25/2020,Star City,"293,280 ",Director
+2716,"Castillo, Jermaine",12/31/2018,Central City,"293,280 ",Director
+2718,"Mack, Kendrick",5/3/2018,Keystone City,"14,560 ",Staff
+2723,"Huff, Leopold",6/27/2018,Empire City,"62,400 ",Staff
+2724,"Vance, Maximilian",10/15/2020,Fawcett City,"52,000 ",Staff
+2728,"Guzman, Napoleon",8/9/2017,Bialya,"27,040 ",Staff
+2730,"Good, Octavio",1/1/2020,Kahndaq,"18,720 ",Staff
+2731,"Fisher, Percival",3/15/2017,Zandia,"27,040 ",Staff
+2732,"Marquez, Quentin",11/27/2018,Markovia,"24,960 ",Staff
+2733,"Osborn, Rudolph",7/29/2017,Modora,"14,560 ",Staff
+2736,"Kramer, Sebastian",8/7/2018,Alacrity Town,"14,560 ",Staff
+2739,"Yates, Thaddeus",8/6/2018,Advent Ridge,"41,600 ",Staff
+2741,"Hodge, Upton",10/15/2018,Bigfoot,"79,040 ",Staff
+2742,"Garrison, Vaughn",12/1/2017,Dollarbeg,"208,000 ",Director
+2752,"Lutz, Winston",1/29/2019,Central City,"89,440 ",Staff
+2754,"Prado, Xerxes",11/16/2020,Keystone City,"388,960 ",Executive
+2757,"Mcintosh, Yancy",9/8/2018,Hub City,"39,520 ",Staff
+2763,"Alvarado, Zachariah",10/12/2017,Vlatava,"131,040 ",Manager
+2765,"Everett, Abel",6/20/2019,Qurac,"29,120 ",Staff
+2766,"Walter, Benedict",5/31/2019,Kahndaq,"58,240 ",Staff
+2768,"Potts, Cornelius",7/24/2017,Markovia,"52,000 ",Staff
+2779,"Mckay, Duncan",6/1/2018,Ugley,"33,280 ",Staff
+2780,"Lang, Ebenezer",8/4/2020,Gogogogo,"104,000 ",Manager
+2781,"Holmes, Ferdinand",9/29/2017,Dinkytown,"74,880 ",Staff
+2784,"Yates, Gustav",4/26/2018,Gotham,"39,520 ",Staff
+2785,"Hester, Horace",5/24/2019,Metropolis,"52,000 ",Staff
+2786,"Fry, Ignatius",2/4/2019,Smallville,"60,320 ",Staff
+2787,"Duffy, Jerome",12/9/2017,Star City,"62,400 ",Staff
+2788,"Atkinson, Kendrick",7/15/2019,Central City,"60,320 ",Staff
+2789,"Whitaker, Leander",12/6/2020,Coast City,"476,320 ",Executive
+2791,"Osborne, Maximilian",7/3/2020,Opal City,"89,440 ",Staff
+2795,"Roth, Norbert",6/27/2017,Empire City,"316,160 ",Executive
+2807,"Phelps, Oswald",11/29/2020,Zambesi,"99,840 ",Staff
+2810,"Garza, Percival",5/30/2019,Astra Point,"33,280 ",Staff
+2811,"Bruce, Quentin",4/17/2019,Advent Ridge,"214,240 ",Director
+2812,"Lang, Rudolph",9/15/2020,Batman,"237,120 ",Director
+2814,"Blanton, Sylvester",5/16/2019,Dollarbeg,"345,280 ",Executive
+2815,"Massey, Thaddeus",3/28/2017,Ugley,"316,160 ",Executive
+2816,"Landry, Ulysses",9/15/2019,Gogogogo,"58,240 ",Staff
+2817,"Durham, Virgil",3/17/2017,Dinkytown,"395,200 ",Executive
+2818,"Walls, Winston",6/28/2017,Fart,"47,840 ",Staff
+2819,"Ashley, Xerxes",12/31/2017,Looneyville,"49,920 ",Staff
+2821,"Swanson, Yancy",3/31/2017,Metropolis,"114,400 ",Manager
+2822,"Betts, Zachariah",8/25/2018,Smallville,"287,040 ",Director
+2826,"Dorsey, Abel",11/1/2019,Keystone City,"149,760 ",Manager
+2827,"Abbott, Benedict",1/27/2019,Opal City,"60,320 ",Staff
+2828,"Noel, Cornelius",4/13/2019,Midway City,"372,320 ",Executive
+2829,"Stanton, Duncan",7/4/2018,Hub City,"47,840 ",Staff
+2833,"Snider, Ebenezer",7/6/2019,Bludhaven,"208,000 ",Director
+2835,"Rosales, Ferdinand",3/9/2018,Vlatava,"37,440 ",Staff
+2841,"Bright, Gustav",12/24/2017,Modora,"619,840 ",Executive
+2842,"Witt, Horace",11/10/2019,Vlatavastok,"20,800 ",Staff
+2846,"Stuart, Ignatius",12/31/2017,Astra Point,"33,280 ",Staff
+2848,"Hays, Jerome",11/16/2020,Batman,"210,080 ",Director
+2849,"Holden, Kendrick",7/24/2020,Bigfoot,"87,360 ",Staff
+2850,"Spence, Leander",5/27/2017,Dollarbeg,"27,040 ",Staff
+2860,"Mclean, Maximilian",1/7/2017,Central City,"33,280 ",Staff
+2863,"Rosario, Norbert",9/7/2020,Opal City,"27,040 ",Staff
+2865,"Hodge, Oswald",2/22/2020,Hub City,"33,280 ",Staff
+2867,"Mckenzie, Percival",2/14/2019,Empire City,"43,680 ",Staff
+2872,"Chan, Quentin",2/17/2018,Bialya,"16,640 ",Staff
+2877,"Monroe, Rudolph",12/23/2019,Modora,"33,280 ",Staff
+2878,"Roth, Sylvester",5/17/2018,Vlatavastok,"68,640 ",Staff
+2879,"Buckley, Thaddeus",1/23/2019,Zambesi,"60,320 ",Staff
+2885,"Gallegos, Ulysses",4/26/2019,Bigfoot,"295,360 ",Director
+2893,"Dalton, Virgil",7/6/2019,Metropolis,"166,400 ",Manager
+2894,"Mullen, Winston",11/6/2018,Smallville,"33,280 ",Staff
+2898,"Savage, Xerxes",12/6/2018,Keystone City,"47,840 ",Staff
+2902,"Owens, Yancy",7/4/2018,Ivy Town,"624,000 ",Executive
+2903,"Tate, Zachariah",5/18/2020,Empire City,"520,000 ",Executive
+2904,"Mendoza, Abel",7/1/2020,Fawcett City,"24,960 ",Staff
+2906,"Zuniga, Benedict",11/28/2020,Corto Maltese,"320,320 ",Executive
+2907,"Hebert, Cornelius",6/12/2019,Vlatava,"18,720 ",Staff
+2909,"Rush, Duncan",7/30/2019,Qurac,"131,040 ",Manager
+2910,"Estes, Ebenezer",8/12/2017,Kahndaq,"39,520 ",Staff
+2916,"Dodson, Ferdinand",2/12/2020,Alacrity Town,"230,880 ",Director
+2917,"Morse, Gustav",10/19/2019,Amberwood Landing,"651,040 ",Executive
+2918,"Sheppard, Horace",11/18/2018,Astra Point,"62,400 ",Staff
+2920,"Weeks, Ignatius",10/7/2019,Batman,"74,880 ",Staff
+2923,"Camacho, Jerome",4/5/2018,Ugley,"104,000 ",Manager
+2924,"Bean, Kendrick",10/21/2019,Gogogogo,"43,680 ",Staff
+2925,"Barr, Leander",1/9/2019,Dinkytown,"83,200 ",Staff
+2931,"Pratt, Maximilian",3/8/2017,Star City,"58,240 ",Staff
+2933,"Hayden, Norbert",9/7/2018,Coast City,"380,640 ",Executive
+2934,"Pickett, Oswald",9/19/2019,Keystone City,"667,680 ",Executive
+2935,"Maynard, Percival",6/21/2018,Opal City,"33,280 ",Staff
+2936,"Hebert, Quentin",6/1/2017,Midway City,"62,400 ",Staff
+2937,"Prado, Rudolph",1/27/2018,Hub City,"208,000 ",Director
+2938,"Farley, Sylvester",10/12/2017,Ivy Town,"33,280 ",Staff
+2940,"Whitley, Thaddeus",11/23/2018,Fawcett City,"62,400 ",Staff
+2941,"Skinner, Ulysses",2/16/2018,Bludhaven,"43,680 ",Staff
+2942,"Cervantes, Virgil",2/24/2018,Corto Maltese,"316,160 ",Executive

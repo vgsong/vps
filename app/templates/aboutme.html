@@ -1,33 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>About me</h3>
-<p>Data analyst with a background in accounting</p>
+<div class="d-flex flex-column">
 
-<p>Extensive knowledge in MS Excel, I pride myself being able to troubleshoot any excel workpaper.</p>
-<p>I enjoy streamlining and automating workflows using VBA and Python.</p>
+    <div class="bs-component ">
+        <div class="jumbotron border border-1">
+            <h3>About me</h3>
+            <p class="lead">Data analyst with a background in accounting/finance. I enjoy turning complex data into actionable items. Turn manual processes into a single button.</p>
 
-<p>I am:</p>
-<ul>
-    <li>Proficient in VBA</li>
-    <li>Expert in MS Excel (more than your pivot tables, vlookups, and macro recording)</li>
-    <li>Learning Python/Flask</li>
-    <li>Enjoys classical literature and cycling as hobby</li>
-</ul>
-<p>Favorite books (so far) are:</p>
+            <p class="lead">I enjoy streamlining and automating workflows using VBA and Python. If a tasks takes too long, or involves too many manual steps, I am your go-to problem solver. I can transform time-consuming tasks into efficient, automated processes, saving you time and resources so you can take longer lunch breaks!</p>
+            <p class="lead">If you are looking for someone who can not only analyse your data but also optimize your workpaper/workflow look no furhter. Lets connect and make your data work for you!</p>
+        </div>
+    </div>
 
-<ul>
-    <li>Moby Dick - Herman Melville</li>
-    <li>The Hunchback of Notre Dame - Victor Hugo</li>
-    <li>Anna Karenina - Leo Tolstoy</li>
-</ul>
+    <div class="d-flex flex-row justify-content-between">
+        <div class="card" style="width:50%;">
+            <div class="card-header">
+                <h4>I am</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Proficient in VBA</li>
+                    <li>Expert in MS Excel</li>
+                    <li>Learning Python/Flask.</li>
+                    <li>Fluent in Portuguese</li>
+                </ul>
+            </div>
+        </div>
 
-<p>Currently reading:</p>
+        <div class="card bg-primary text-white" style="width:50%;">
+            <div class="card-header">
+                <h4>Favorite books (so far)</h4>
+            </div>
 
-<ul>
-    <li>The Toilers of the Sea - Victor Hugo</li>
-</ul>
+            <div class="card-body">
+            <ul>
+                <li>Moby Dick - Herman Melville</li>
+                <li>The Hunchback of Notre Dame - Victor Hugo</li>
+                <li>Anna Karenina - Leo Tolstoy</li>
+            </ul>
 
-<p>Fluent in Portuguese</p>
+            </div>
 
+        </div>
+    </div>
+
+<div class="container">
+    <p>Feel free to reach me out at: vctrsong@gmail.com
+    </p>
+</div>
+
+</div>
 {% endblock %}

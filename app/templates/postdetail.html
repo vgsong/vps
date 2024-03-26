@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>{{ post.title }}</h1>
-<h4>Post date:{{ post.timestamp.strftime('%Y-%m-%d') }}</h4>
+<div>
 
-<p>{{ post.body|safe }}</p>
+<div class="jumbotron">
+    <h1>Excel Post#{{ post.id }}: {{ post.title }}</h1>
+    <hr style="border-color: black; height:10px;">
+    <h5>Post date: {{ post.timestamp.strftime('%Y-%m-%d %a') }} by: {{post.author}}</h5>
+</div>
 
-<a href="{{url_for('index')}}"><button>Back</button></a>
+    <hr style="border-color: black; height:10px;">
+
+<div class="container border border-1 p-4" id="post_div">
+    <p>{{ post.body|safe }}</p>
+</div>
+
+<div class="container m-4">
+    <a href="{{url_for('excelb')}}"><button>Back</button></a>
 
 {% if current_user.is_authenticated %}
 
@@ -14,4 +24,8 @@
 
 {% endif %}
 
+</div>
+
 {% endblock %}
+
+</div>

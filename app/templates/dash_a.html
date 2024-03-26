@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div>
+
+    <div class="jumbotron">
+        <h3>Dashboard</h3>
+        <p>Learning how to move data around the framework. Used a mock employee data which contains billable hours. Using dataframe from pandas library. I did not want my lack of knowledge of front-end to halt this project. I will keep learning front-end as I keep working as I go.</p>
+    </div>
+    <hr style="border-color: black; height:10px;">
+
+</div>
+
+
+<h5><label for="emp">Select Emp:</label></h5>
+
+<form method="post">
+
+    <select name="emp_names" id="emp">
+
+        {% for e in emp_unique %}
+            <option value="{{e}}">{{e}}</option>
+        {% endfor %}
+
+    </select>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+    <div class="container p-3 m-3">
+        
+        <p class="lead">Emp Summary for: {{ emp_name }}</p>
+
+        {% if summ_dict %}
+
+            {% for k, v in summ_dict.items() %}
+            
+                <div class="card-header">{{ k }}: {{ v }}</div>
+
+            {% endfor %}
+
+        {% else %}
+        {% endif %}
+    </div>
+    <hr>
+    <div class="container m-3 p-4">
+    <div>
+        {{ table_one | safe }}
+    </div>
+    
+        <hr>
+    
+    <div>
+        {{ table_two | safe }}
+    </div>
+    </div>
+        <hr>
+    
+    <div>
+        <a  href="{{url_for('pivot')}}" target="_blank">pivot</a>
+    </div>
+
+    <div>
+        <a href="{{url_for('dashmenu')}}">Back</a>
+    </div>
+    
+{% endblock %}

@@ -7,8 +7,9 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_ckeditor import CKEditor
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.config.from_object(Config)
+
 
 db = SQLAlchemy(app)
 ckeditor = CKEditor(app)

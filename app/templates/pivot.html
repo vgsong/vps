@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PivotTable.js</title>
+
+        <!-- external libs from cdnjs -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/pivot.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/pivot.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/d3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/c3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/export_renderers.min.js"></script>
+
+        <style>
+            body {font-family: Verdana;}
+            .node {
+              border: solid 1px white;
+              font: 10px sans-serif;
+              line-height: 12px;
+              overflow: hidden;
+              position: absolute;
+              text-indent: 2px;
+            }
+            .c3-line, .c3-focused {stroke-width: 3px !important;}
+            .c3-bar {stroke: white !important; stroke-width: 1;}
+            .c3 text { font-size: 12px; color: grey;}
+            .tick line {stroke: white;}
+            .c3-axis path {stroke: grey;}
+            .c3-circle { opacity: 1 !important; }
+            .c3-xgrid-focus {visibility: hidden !important;}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(function(){
+                if(window.location != window.parent.location)
+                    $("<a>", {target:"_blank", href:""})
+                        .text("[pop out]").prependTo($("body"));
+
+                $("#output").pivotUI(
+                    $.csv.toArrays($("#output").text()),
+                    $.extend({
+                        renderers: $.extend(
+                            $.pivotUtilities.renderers,
+                            $.pivotUtilities.c3_renderers,
+                            $.pivotUtilities.d3_renderers,
+                            $.pivotUtilities.export_renderers
+                            ),
+                        hiddenAttributes: [""]
+                    }, {})
+                ).show();
+             });
+        </script>
+        <div id="output" style="display: none;">,AREA,TYPE,PROG,PROJ,PROJDESC,EMPID,EMPNAME,TPER,PER,MPER,YPER,HOURS,COST,BILL,COSTRATE,BILLRATE
+5977,CS,OH,0,0000.100,Safety Training_100,2121,"Hernandez, Daniel",4/9/2021,4/1/2021,4,2021,4.0,200.0,0.0,50,0.0
+5978,CS,OH,0,0000.100,Safety Training_100,2121,"Hernandez, Daniel",6/8/2021,6/1/2021,6,2021,4.0,200.0,0.0,50,0.0
+5979,CS,OH,0,0000.100,Safety Training_100,2121,"Hernandez, Daniel",7/1/2021,6/1/2021,7,2021,2.0,100.0,0.0,50,0.0
+5980,CS,OH,0,0000.105,Onboarding_105,2121,"Hernandez, Daniel",12/8/2021,12/1/2021,12,2021,2.0,100.0,0.0,50,0.0
+5981,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",4/26/2021,4/1/2021,4,2021,8.0,400.0,0.0,50,0.0
+5982,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",4/27/2021,4/1/2021,4,2021,8.0,400.0,0.0,50,0.0
+5983,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",4/29/2021,4/1/2021,4,2021,8.0,400.0,0.0,50,0.0
+5984,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",4/30/2021,4/1/2021,4,2021,8.0,400.0,0.0,50,0.0
+5985,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/3/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5986,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/4/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5987,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/6/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5988,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/7/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5989,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/17/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5990,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/18/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5991,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",5/19/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5992,CS,OH,0,0000.200,Training_200,2121,"Hernandez, Daniel",6/7/2021,6/1/2021,6,2021,3.75,187.5,0.0,50,0.0
+5993,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/10/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5994,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/11/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5995,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/12/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5996,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/14/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5997,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/27/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5998,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",5/28/2021,5/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+5999,CS,OH,0,0000.205,Jury Duty_205,2121,"Hernandez, Daniel",6/11/2021,6/1/2021,6,2021,4.5,225.0,0.0,50,0.0
+6000,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",1/1/2021,12/1/2020,1,2021,8.0,400.0,0.0,50,0.0
+6001,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",1/18/2021,1/1/2021,1,2021,8.0,400.0,0.0,50,0.0
+6002,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",2/15/2021,2/1/2021,2,2021,8.0,400.0,0.0,50,0.0
+6003,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",5/31/2021,6/1/2021,5,2021,8.0,400.0,0.0,50,0.0
+6004,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",7/5/2021,7/1/2021,7,2021,8.0,400.0,0.0,50,0.0
+6005,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",11/11/2021,11/1/2021,11,2021,8.0,400.0,0.0,50,0.0
+6006,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",11/25/2021,11/1/2021,11,2021,8.0,400.0,0.0,50,0.0
+6007,CS,OH,0,0000.210,Vacation_210,2121,"Hernandez, Daniel",11/26/2021,11/1/2021,11,2021,8.0,400.0,0.0,50,0.0
+6008,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/4/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6009,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/5/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6010,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/6/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6011,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/7/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6012,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/8/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6013,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/8/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6014,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/11/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6015,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/11/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6016,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/12/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6017,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/13/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6018,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/14/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6019,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/15/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6020,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/15/2021,1/1/2021,1,2021,4.0,200.0,660.0,50,165.0
+6021,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/19/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6022,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/20/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6023,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/21/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6024,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/22/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6025,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/25/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6026,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/26/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6027,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/27/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6028,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/28/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6029,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",1/29/2021,1/1/2021,1,2021,8.0,400.0,1320.0,50,165.0
+6030,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/1/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6031,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/2/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6032,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/3/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6033,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/4/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6034,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/5/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6035,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/8/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6036,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/9/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6037,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/10/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6038,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/11/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6039,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/12/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6040,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/16/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6041,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/17/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6042,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/18/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6043,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/19/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6044,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/22/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6045,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/23/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6046,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/24/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6047,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/25/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6048,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",2/26/2021,2/1/2021,2,2021,8.0,400.0,1320.0,50,165.0
+6049,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/1/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6050,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/2/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6051,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/3/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6052,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/4/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6053,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/5/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6054,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/8/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6055,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/9/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6056,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/10/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6057,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/11/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6058,LA,REGULAR,1106,1106.001,Apex Towers_001,2121,"Hernandez, Daniel",3/12/2021,3/1/2021,3,2021,8.0,400.0,1320.0,50,165.0
+6059,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/1/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6060,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/2/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6061,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/3/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6062,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/4/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6063,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/5/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6064,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/8/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6065,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/9/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6066,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/10/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6067,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/11/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6068,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/12/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6069,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/16/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6070,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/17/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6071,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/18/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6072,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/19/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6073,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/22/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6074,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/23/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6075,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/24/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6076,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/25/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6077,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",2/26/2021,2/1/2021,2,2021,8.0,400.0,1192.0,50,149.0
+6078,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/1/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6079,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/2/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6080,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/3/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6081,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/4/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6082,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/5/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6083,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/8/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6084,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/9/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6085,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/10/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6086,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/11/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6087,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/12/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6088,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/15/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6089,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/16/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6090,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/17/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6091,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/18/2021,3/1/2021,3,2021,4.0,200.0,596.0,50,149.0
+6092,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/18/2021,3/1/2021,3,2021,4.0,200.0,596.0,50,149.0
+6093,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/19/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6094,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/22/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6095,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/23/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6096,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/24/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6097,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/25/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6098,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/26/2021,3/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6099,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/29/2021,4/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6100,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/30/2021,4/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6101,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",3/31/2021,4/1/2021,3,2021,8.0,400.0,1192.0,50,149.0
+6102,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/1/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6103,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/2/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6104,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/5/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6105,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/6/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6106,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/7/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6107,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/8/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6108,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/9/2021,4/1/2021,4,2021,4.0,200.0,596.0,50,149.0
+6109,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/12/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6110,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/13/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6111,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/14/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6112,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/15/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6113,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/16/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6114,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/19/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6115,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/20/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6116,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/21/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6117,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/22/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6118,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/23/2021,4/1/2021,4,2021,8.0,400.0,1192.0,50,149.0
+6119,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/28/2021,4/1/2021,4,2021,2.0,100.0,298.0,50,149.0
+6120,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",4/28/2021,4/1/2021,4,2021,6.0,300.0,894.0,50,149.0
+6121,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/5/2021,5/1/2021,5,2021,4.0,200.0,596.0,50,149.0
+6122,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/5/2021,5/1/2021,5,2021,4.0,200.0,596.0,50,149.0
+6123,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/13/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6124,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/20/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6125,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/21/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6126,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/24/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6127,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/25/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6128,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",5/26/2021,5/1/2021,5,2021,8.0,400.0,1192.0,50,149.0
+6129,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/1/2021,6/1/2021,6,2021,4.0,200.0,596.0,50,149.0
+6130,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/2/2021,6/1/2021,6,2021,2.0,100.0,298.0,50,149.0
+6131,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/3/2021,6/1/2021,6,2021,2.0,100.0,298.0,50,149.0
+6132,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/4/2021,6/1/2021,6,2021,2.0,100.0,298.0,50,149.0
+6133,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/9/2021,6/1/2021,6,2021,4.0,200.0,596.0,50,149.0
+6134,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/10/2021,6/1/2021,6,2021,4.0,200.0,596.0,50,149.0
+6135,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/16/2021,6/1/2021,6,2021,4.0,200.0,596.0,50,149.0
+6136,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/16/2021,6/1/2021,6,2021,4.0,200.0,596.0,50,149.0
+6137,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/17/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6138,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/18/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6139,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/21/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6140,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/22/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6141,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/23/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6142,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/28/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6143,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/29/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6144,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",6/30/2021,6/1/2021,6,2021,8.0,400.0,1192.0,50,149.0
+6145,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/6/2021,7/1/2021,7,2021,10.0,500.0,1490.0,50,149.0
+6146,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/7/2021,7/1/2021,7,2021,8.0,400.0,1192.0,50,149.0
+6147,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/8/2021,7/1/2021,7,2021,2.0,100.0,298.0,50,149.0
+6148,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/12/2021,7/1/2021,7,2021,8.0,400.0,1192.0,50,149.0
+6149,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/13/2021,7/1/2021,7,2021,8.0,400.0,1192.0,50,149.0
+6150,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/14/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6151,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/14/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6152,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/26/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6153,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/26/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6154,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/27/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6155,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/27/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6156,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/29/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6157,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/29/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6158,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/30/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6159,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",7/30/2021,7/1/2021,7,2021,4.0,200.0,596.0,50,149.0
+6160,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/2/2021,8/1/2021,8,2021,10.0,500.0,1490.0,50,149.0
+6161,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/11/2021,8/1/2021,8,2021,2.0,100.0,298.0,50,149.0
+6162,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/12/2021,8/1/2021,8,2021,8.0,400.0,1192.0,50,149.0
+6163,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/19/2021,8/1/2021,8,2021,4.0,200.0,596.0,50,149.0
+6164,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/20/2021,8/1/2021,8,2021,1.0,50.0,149.0,50,149.0
+6165,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/20/2021,8/1/2021,8,2021,7.0,350.0,1043.0,50,149.0
+6166,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/26/2021,8/1/2021,8,2021,2.0,100.0,298.0,50,149.0
+6167,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/26/2021,8/1/2021,8,2021,2.0,100.0,298.0,50,149.0
+6168,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/27/2021,8/1/2021,8,2021,8.0,400.0,1192.0,50,149.0
+6169,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",8/31/2021,9/1/2021,8,2021,8.0,400.0,1192.0,50,149.0
+6170,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/1/2021,9/1/2021,9,2021,4.0,200.0,596.0,50,149.0
+6171,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/7/2021,9/1/2021,9,2021,10.0,500.0,1490.0,50,149.0
+6172,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/13/2021,9/1/2021,9,2021,10.0,500.0,1490.0,50,149.0
+6173,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/16/2021,9/1/2021,9,2021,10.0,500.0,1490.0,50,149.0
+6174,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/23/2021,9/1/2021,9,2021,10.0,500.0,1490.0,50,149.0
+6175,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",9/30/2021,9/1/2021,9,2021,10.0,500.0,1490.0,50,149.0
+6176,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/5/2021,10/1/2021,10,2021,10.0,500.0,1490.0,50,149.0
+6177,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/13/2021,10/1/2021,10,2021,10.0,500.0,1490.0,50,149.0
+6178,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/13/2021,10/1/2021,10,2021,4.0,200.0,596.0,50,149.0
+6179,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/20/2021,10/1/2021,10,2021,8.0,400.0,1192.0,50,149.0
+6180,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/20/2021,10/1/2021,10,2021,3.0,150.0,447.0,50,149.0
+6181,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/28/2021,10/1/2021,10,2021,8.0,400.0,1192.0,50,149.0
+6182,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",10/28/2021,10/1/2021,10,2021,3.0,150.0,447.0,50,149.0
+6183,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/1/2021,11/1/2021,11,2021,5.0,250.0,745.0,50,149.0
+6184,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/1/2021,11/1/2021,11,2021,6.0,300.0,894.0,50,149.0
+6185,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/12/2021,11/1/2021,11,2021,11.0,550.0,1639.0,50,149.0
+6186,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/15/2021,11/1/2021,11,2021,3.0,150.0,447.0,50,149.0
+6187,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/15/2021,11/1/2021,11,2021,6.0,300.0,894.0,50,149.0
+6188,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/16/2021,11/1/2021,11,2021,4.0,200.0,596.0,50,149.0
+6189,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/16/2021,11/1/2021,11,2021,6.0,300.0,894.0,50,149.0
+6190,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",11/23/2021,11/1/2021,11,2021,10.0,500.0,1490.0,50,149.0
+6191,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/2/2021,12/1/2021,12,2021,10.0,500.0,1490.0,50,149.0
+6192,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/10/2021,12/1/2021,12,2021,10.0,500.0,1490.0,50,149.0
+6193,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/16/2021,12/1/2021,12,2021,2.0,100.0,298.0,50,149.0
+6194,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/16/2021,12/1/2021,12,2021,8.0,400.0,1192.0,50,149.0
+6195,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/22/2021,12/1/2021,12,2021,10.0,500.0,1490.0,50,149.0
+6196,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/23/2021,12/1/2021,12,2021,2.0,100.0,298.0,50,149.0
+6197,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/23/2021,12/1/2021,12,2021,2.0,100.0,298.0,50,149.0
+6198,LA,REGULAR,1331,1331.001,Beacon Heights_001,2121,"Hernandez, Daniel",12/28/2021,12/1/2021,12,2021,10.0,500.0,1490.0,50,149.0
+</div>
+    </body>
+</html>

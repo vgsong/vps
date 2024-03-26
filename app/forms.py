@@ -2,7 +2,7 @@
 from flask_wtf import FlaskForm
 from flask_ckeditor import CKEditorField
 
-from wtforms import StringField, SubmitField, PasswordField
+from wtforms import StringField, SubmitField, PasswordField, SelectField
 from wtforms.validators import DataRequired
 
 
@@ -15,8 +15,3 @@ class PostForm(FlaskForm):
     title = StringField('title')
     body = CKEditorField('body')
     submit = SubmitField('post')
-
-class BookForm(FlaskForm):
-    title= StringField('title')
-    ibsn= StringField('ibsn')
-    author= StringField('author')

@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <p>Excel Tutorial {{current_user.username}}</p>
+    <div>
+     <div class="jumbotron">
+        <p class="lead">Hi -- I am learning flask framework. Currently trying to get the hang of back-end. Learning front-end as I go along with this mini website. </p>
+        <p> I am using to record some excel and python projects I have done.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p> My Resume here link: </p>
 
-    
-{% for p in posts %}
+    </div>
 
-    <b><p>{{p.timestamp.strftime('%Y-%m-%d')}}</b> - {{p.title}} -
-    <a href="{{url_for('post_detail', id=p.id)}}">Read More</a></p>
+    <div class="flex-wrap">
+        <h4>Python Projects</h4>
+        <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body"></div>
+        </div>
+    </div>
 
-{% endfor %}
+        {% include 'tabmenu.html' %} 
+    </div>
+
 
 {% endblock %}

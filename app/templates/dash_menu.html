@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div>
+    <div class="jumbotron">
+    <h3>Dashboard</h3>
+    <p>Current WIP</p>
+    </div>
+
+
+<hr style="border-color: black; height:10px;">
+
+    {% for k, v in dashmenu_mapp.items() %}
+
+        <a href="{{ url_for(v) }}"><p>{{k}}</p></a>
+
+    {% endfor%}
+
+</div>
+
+
+
+   
+{% endblock %}

@@ -5,10 +5,12 @@
 <div>
     <form action="" method="post">  
         {{ form.hidden_tag() }}
+        
         <p>
             <b>{{ form.title.label }}</b><br>
             <b>{{ form.title(size=32) }}</b><br>
         </p>
+
         <p>
             {{ form.body(size=32) }}<br>
             {% for error in form.body.errors %}

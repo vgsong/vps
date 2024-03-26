@@ -1,0 +1,23 @@
+.emp_df_table {
+    border: 1px solid black;
+    margin: 3px;
+    border-collapse: collapse;
+    text-align: right;
+    width: 50%;
+
+
+}
+.emp_df_table > thead {
+    background-color: lightgray;
+    /* width: 50%; */
+
+}
+.emp_df_table > th, td {
+    padding: 8px;
+
+}
+.emp_df_table > tbody > tr > th{
+    text-align: right;
+    padding: 8px;
+
+}
