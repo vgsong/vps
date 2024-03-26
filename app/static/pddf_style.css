@@ -3,7 +3,8 @@
     margin: 3px;
     border-collapse: collapse;
     text-align: right;
-    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
 
 
 }

@@ -132,7 +132,7 @@ def dashmenu():
 
 @app.route('/dasha', methods=['GET','POST'])
 def dasha():
-    df = pd.read_csv(r'C:\Users\vctrs\Documents\PYV\vpgs\app\static\csv\vdata.csv')
+    df = pd.read_csv('./app/static/csv/vdata.csv')
     emp_unique = df['EMPNAME'].unique()
 
     if request.method == 'POST':
@@ -150,7 +150,7 @@ def dasha():
         pivot_mper = emp_selected.groupby(['TYPE','MPER'])['HOURS'].sum().unstack()  # created pivot table
         pivot_proj = emp_selected.groupby(['PROJ','TYPE','MPER'])['HOURS'].sum().unstack()  # created pivot table
 
-        pivot_ui(emp_selected , outfile_path=r'C:\Users\vctrs\Documents\PYV\vpgs\app\templates\pivot.html')
+        pivot_ui(emp_selected , outfile_path='./app/templates/pivot.html')
 
         return render_template('dash_a.html', 
                                emp_unique=emp_unique, 
